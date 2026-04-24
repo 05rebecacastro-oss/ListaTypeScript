@@ -2,8 +2,7 @@
 //  Par ou Ímpar
 //  Positivo ou Negativo
 
-let num1:number = Number("informe um numero");
-let resolucao = Math.sign(num1);
+let num1:number = Number(prompt("informe um numero"));
 
 if (num1 % 2 == 0 ){
     console.log("esse número é par");
@@ -11,7 +10,7 @@ if (num1 % 2 == 0 ){
     console.log("esse número é impar");
 }
 
-if (num1 == resolucao){
+if (num1 > 0){
     console.log("esse número é positivo");
 }else{
     console.log("esse número é negativo");
