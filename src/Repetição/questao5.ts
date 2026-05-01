@@ -15,8 +15,33 @@
 //  Quem foi o vendedor com a maior venda (maior valor digitado).
 //  Quantos vendedores atingiram a categoria
 
-let valor:number = Number(prompt("digite um valor"));
+let variavel:number [] = [123,890,2345,4120,6789]
 
-function classificarVenda(valor){
-    
+function classificarVenda(valor:number){
+    if (valor < 1000){
+        return "Bronze"
+    }
+    else if (valor > 1000 && valor < 5000){
+        return "Prata"
+    }
+    else if (valor > 5000){
+        return "Ouro"
+    }
 }
+let maiorVenda:number = 0;
+let ouros:number[] = []
+
+for (let i=0;i < variavel.length;i++){
+    let classificacao = classificarVenda(variavel [i])
+
+    if (variavel[i] > maiorVenda){
+        maiorVenda = variavel[i];
+    }
+    if (classificacao === "ouro"){
+        ouros.push(variavel[i]);
+    }
+
+}
+
+console.log("o vendedor com a maior venda foi:" + maiorVenda)
+console.log("os vendedores que atingiram a categoria ouro foram:" + ouros)
