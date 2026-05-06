@@ -3,18 +3,32 @@
 
 //  Função solicitar_renda_mensal(): Pede a renda do usuário. Se o valor for negativo ou zero,
 // pede novamente até ser válido.
+
 //  Função analisar_credito(renda, valor_parcela): * A parcela não pode ultrapassar 30% da
 // renda.
+
 // i. Se a renda for acima de R$ 5.000,00, o cliente ganha um bônus de R$ 500,00 no
 // limite final.
 // ii. Retorna true para aprovado ou false para negado.
 
 // Função exibir_status(resultado): Imprime &quot;Crédito Aprovado&quot; ou &quot;Crédito Negado&quot;.
 // Peça a renda e o valor da parcela que o cliente deseja pagar, processe e mostre o resultado.
-
+ 
 function solicitar_renda_mensal(){
     let renda:number = Number(prompt("qual sua renda mensal (digite 0 para sair do programa)?"));
+    
     while (renda != 0){
-        
+        console.log("valor valido!! digite um numero maior que 0");
+        renda = Number(prompt("qual sua renda mensal (digite 0 para sair do programa)?"));
     }
+    return renda
 }
+
+function analisar_credito(renda:any, valor_parcela:any){
+    renda = Number(prompt("qual sua renda mensal (digite 0 para sair do programa)?"));
+    
+
+
+
+}
+
