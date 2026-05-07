@@ -25,3 +25,4 @@ mediaArredondada= notas.filter((A:any) => {
 return A.toFixed(2)});
 console.log("a media arredondada é de " + mediaArredondada)
 }
+calcular_media()
