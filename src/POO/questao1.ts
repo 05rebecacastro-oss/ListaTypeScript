@@ -4,17 +4,31 @@
 
 
 class Bola{
-    cor: string
-    circunferencia: string
+    cor: string = "azul"
+    circunferencia: number
     material: string
 
-    constructor( cor: string, circunferencia: string, material: string)
+    constructor( cor: string, circunferencia: number, material: string)
 {
     this.cor= cor
     this.circunferencia = circunferencia
     this.material = material
         
     }
+    exibirbola():void{
+        console.log(`cor: ${this.cor} | circunferencia: ${this.circunferencia} | material: ${this.material}`)
+    }
+    
+    trocarcor(novacor:string):void{
+        novacor = "vermelho"
+        this.trocarcor
+    }
+
+    mostrarcor():void{
+        this.trocarcor
+    }
+     let novaBola = new Bola()
+    novaBola.exibirBola()
 }
-let novaBola:Bola = new
-Bola("azul","1.22","ferro")
+//let novaBola:Bola = new
+//Bola("azul","1.22","ferro")
