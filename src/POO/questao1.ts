@@ -27,8 +27,6 @@ class Bola{
     mostrarcor():void{
         this.trocarcor
     }
-     let novaBola = new Bola()
-    novaBola.exibirBola()
+    novaBola:Bola = new
+    Bola("azul",1.22,"ferro")
 }
-//let novaBola:Bola = new
-//Bola("azul","1.22","ferro")
