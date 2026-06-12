@@ -19,9 +19,19 @@ class Retangulo{
         console.log(`ladoA ${this.ladoA} | ladoB ${this.ladoB}`)
     }
 
-    mudarValor(ladoA:number,ladoB:number):number{
-        let areaA = ladoA * ladoA
-        let areaB = ladoB * ladoB
-        return areaA + areaB
+    mudarValor(novoladoA:number,novoladoB:number):void{
+        this.ladoA = novoladoA
+        this.ladoB = novoladoB
+        
+    }
+
+    calcularArea():any{
+        let areaB =  this.ladoA * this.ladoB
+        console.log(" Área é:" +areaB)
+    }
+
+    calcularPerimetro():any{
+        let perimetro = 2*(this.ladoA + this.ladoB)
+        console.log("o perimetro é:" + perimetro)
     }
 }
