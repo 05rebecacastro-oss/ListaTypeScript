@@ -21,19 +21,38 @@ class Retangulo{
         
     }
 
-    calcularArea():any{
+    calcularArea():number{
         let areaB =  this.ladoA * this.ladoB
-        console.log(" Área é:" +areaB)
+        return areaB
     }
 
-    calcularPerimetro():any{
+    calcularPerimetro():number{
         let perimetro = 2*(this.ladoA + this.ladoB)
-        console.log("o perimetro é:" + perimetro)
+        return perimetro
     }
 
-    base:number = Number(prompt("qual a base desse lugar?"))
-    altura:number = Number(prompt("qual a altura desse lugar?"))
-
-    let novoRetan = new Retangulo(base,altura)
-    novoRetan.exibirRetangulo()
 }
+
+let larguraLocal:number = Number(prompt("qual a largura do local?"))
+let comprimentoLocal:number = Number(prompt("qual o comprimento do local?"))
+
+let larguraPiso:number = Number(prompt("qual a largura do piso?"))
+let comprimentoPiso:number = Number(prompt("qual o comprimento do piso?"))
+
+let comprimentoRodape:number = Number(prompt("qual o comprimento do comprimentoRodapé?"))
+
+let novoRetan = new Retangulo(larguraLocal, comprimentoLocal)
+    novoRetan.exibirRetangulo()
+
+let areaLocal = novoRetan.calcularArea()
+
+let areaPiso = larguraPiso * comprimentoPiso
+let quantidadePisos = Math.ceil (areaLocal / areaPiso)
+
+let perimetro = novoRetan.calcularPerimetro()
+let quantidaderodapes = Math.ceil (perimetro / comprimentoRodape)
+
+console.log("Area local:" + areaLocal)
+console.log("quantidade de pisos:" + quantidadePisos)
+console.log("quantidade de rodapés:" + quantidaderodapes)
+
