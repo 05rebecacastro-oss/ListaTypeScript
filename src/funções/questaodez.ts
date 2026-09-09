@@ -32,4 +32,4 @@ function exibir_laudo(nome:string,valor_IMC:number){
 }
 let chamar =  calcular_imc(peso, altura)
 let trazer = classificar_imc(chamar)
-exibir_laudo(nome, valor_IMC)
+//exibir_laudo(nome, valor_IMC)
