@@ -5,7 +5,7 @@
 // Retornar valor dos lados,
 // Calcular Área,
 // Calcular Perímetro.
-
+export function questao3():void{
 class Retangulo{
     ladoA:number
     ladoB:number
@@ -34,4 +34,5 @@ class Retangulo{
         let perimetro = 2*(this.ladoA + this.ladoB)
         console.log("o perimetro é:" + perimetro)
     }
+}
 }

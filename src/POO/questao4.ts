@@ -1,7 +1,7 @@
 // 4. Crie um programa que utilize a classe acima. Ele deve pedir ao usuário que informe as medidas de um
 // local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés
 // necessárias para o local.
-
+export function questao4():void{
 class Retangulo{
     ladoA:number
     ladoB:number
@@ -55,4 +55,4 @@ let quantidaderodapes = Math.ceil (perimetro / comprimentoRodape)
 console.log("Area local:" + areaLocal)
 console.log("quantidade de pisos:" + quantidadePisos)
 console.log("quantidade de rodapés:" + quantidaderodapes)
-
+}
