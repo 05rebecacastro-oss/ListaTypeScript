@@ -19,3 +19,8 @@ document.getElementById("bt6")?.addEventListener("click",questao6)
 import { questao7 } from "./POO/questao7.js";
 document.getElementById("bt7")?.addEventListener("click",questao7)
 
+import { questao8 } from "./POO/questao8.js";
+document.getElementById("bt8")?.addEventListener("click",questao8)
+
+import { questao9 } from "./POO/questao9.js";
+document.getElementById("bt9")?.addEventListener("click",questao9)
