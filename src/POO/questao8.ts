@@ -3,7 +3,7 @@
 // ser criado um objeto que armazene essas informações. Ao final, o sistema deve exibir um resumo de
 // todos os funcionários cadastrados, utilizando um método da classe.
 
-export function questao8():void{
+export function POOqt8():void{
 class Funcionarios{
     nome:string
     cargo:string

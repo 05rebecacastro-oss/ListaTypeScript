@@ -5,7 +5,7 @@
 // Retornar valor dos lados,
 // Calcular Área,
 // Calcular Perímetro.
-export function questao3():void{
+export function POOqt3():void{
 class Retangulo{
     ladoA:number
     ladoB:number

@@ -7,7 +7,7 @@
 //  Atributos: Tamanho do lado
 //  Métodos: Mudar valor do Lado,
 //  Retornar valor do Lado e calcular Área;
-export function questao2():void{
+export function POOqt2():void{
 class quadrado {
     tamanhoLado:number 
 

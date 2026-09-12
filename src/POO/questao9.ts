@@ -2,7 +2,7 @@
 // produto, o preço e a quantidade em estoque. Cada produto deve ser representado por um objeto. Crie
 // um método que calcule o valor total em estoque (preço × quantidade) e exiba essa informação para
 // cada produto.
-export function questao9():void{
+export function POOqt9():void{
 
 class Produtos{
     nome:string

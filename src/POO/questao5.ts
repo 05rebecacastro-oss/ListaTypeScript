@@ -3,7 +3,7 @@
 // 2. Métodos: Envelhecer, engordar, emagrecer, crescer.
 // Obs: Por padrão, a cada ano que nossa pessoa envelhece, sendo a idade dela menor que 21 anos,
 // ela deve crescer 0,5 cm.
-export function questao5():void{
+export function POOqt5():void{
 class Pessoa{
     nome:string
     idade:number

@@ -1,26 +1,23 @@
-import { questao1 } from "./POO/questao1.js";
-document.getElementById("bt1")?.addEventListener("click",questao1)
+//POO
+import { POOqt1 } from "./POO/questao1.js";
+import { POOqt2 } from "./POO/questao2.js";
+import { POOqt3 } from "./POO/questao3.js";
+import { POOqt4 } from "./POO/questao4.js";
+import { POOqt5 } from "./POO/questao5.js";
+import { POOqt6 } from "./POO/questao6.js";
+import { POOqt7 } from "./POO/questao7.js";
+import { POOqt8 } from "./POO/questao8.js";
+import { POOqt9 } from "./POO/questao9.js";
 
-import { questao2 } from "./POO/questao2.js";
-document.getElementById("bt2")?.addEventListener("click",questao2)
+document.getElementById("btPOO1")?.addEventListener("click",POOqt1)
+document.getElementById("btPOO2")?.addEventListener("click",POOqt2)
+document.getElementById("btPOO3")?.addEventListener("click",POOqt3)
+document.getElementById("btPOO4")?.addEventListener("click",POOqt4)
+document.getElementById("btPOO5")?.addEventListener("click",POOqt5)
+document.getElementById("btPOO6")?.addEventListener("click",POOqt6)
+document.getElementById("btPOO7")?.addEventListener("click",POOqt7)
+document.getElementById("btPOO8")?.addEventListener("click",POOqt8)
+document.getElementById("btPOO9")?.addEventListener("click",POOqt9)
 
-import { questao3 } from "./POO/questao3.js";
-document.getElementById("bt3")?.addEventListener("click",questao3)
 
-import { questao4 } from "./POO/questao4.js";
-document.getElementById("bt4")?.addEventListener("click",questao4)
 
-import { questao5 } from "./POO/questao5.js";
-document.getElementById("bt5")?.addEventListener("click",questao5)
-
-import { questao6 } from "./POO/questao6.js";
-document.getElementById("bt6")?.addEventListener("click",questao6)
-
-import { questao7 } from "./POO/questao7.js";
-document.getElementById("bt7")?.addEventListener("click",questao7)
-
-import { questao8 } from "./POO/questao8.js";
-document.getElementById("bt8")?.addEventListener("click",questao8)
-
-import { questao9 } from "./POO/questao9.js";
-document.getElementById("bt9")?.addEventListener("click",questao9)
