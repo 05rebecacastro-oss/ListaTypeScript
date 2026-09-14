@@ -3,21 +3,26 @@
 // nome do pedido e o valor. Crie um método que exiba o resumo do pedido e o valor total.
 
 class Lanchonete{
-    public nomeCliente:string
-    public nomePedido:string
-    public valorPedido:number
+    nomeCliente:string
+    nomePedido:string
+    valor:number
 
-    constructor(nomeCliente:string, nomeProduto:string, valorProduto:number){
+    constructor(nomeCliente:string, nomePedido:string, valor:number){
         this.nomeCliente = nomeCliente
-        this.nomePedido = nomeProduto
-        this.valorPedido = valorProduto
+        this.nomePedido = nomePedido
+        this.valor = valor
     }
 
     exibirLanchonete():void{
-        console.log(`nomeCliente ${this.nomeCliente}| nomePedido ${this.nomePedido}| valorPedido ${this.valorPedido}`)
+        console.log(`nomeCliente ${this.nomeCliente}| nomePedido ${this.nomePedido}| valor ${this.valor}`)
     }
+
+
 }
 
-let nomeCliente:string = String(prompt("qual o nome do cliente?"))
-let nomePedido:string = String(prompt("qual o nome do pedido do cliente?"))
-let valor:number = Number(prompt("qual foi o valor total que o "))
+let nomeCliente:string = String(prompt("qual o seu nome?"))
+let nomePedido:string = String(prompt("o que vc gostaria de pedir?"))
+let valor:number = Number(prompt("quanl foi  valor final do seu pedido?"))
+
+let novaLanchonete:Lanchonete = new Lanchonete(nomeCliente, nomePedido, valor)
+novaLanchonete.exibirLanchonete()
