@@ -10,6 +10,9 @@ import { POOqt8 } from "./POO/questao8.js";
 import { POOqt9 } from "./POO/questao9.js";
 import { POOqt10 } from "./POO/questao10.js";
 import { POOqt11 } from "./POO/questao11.js";
+import { POOqt12 } from "./POO/questao12.js";
+import { POOqt13 } from "./POO/questao13.js";
+//import { POOqt14 } from "./POO/questao14.js";
 
 document.getElementById("btPOO1")?.addEventListener("click",POOqt1)
 document.getElementById("btPOO2")?.addEventListener("click",POOqt2)
@@ -22,3 +25,6 @@ document.getElementById("btPOO8")?.addEventListener("click",POOqt8)
 document.getElementById("btPOO9")?.addEventListener("click",POOqt9)
 document.getElementById("btPOO10")?.addEventListener("click",POOqt10)
 document.getElementById("btPOO11")?.addEventListener("click",POOqt11)
+document.getElementById("btPOO12")?.addEventListener("click",POOqt12)
+document.getElementById("btPOO13")?.addEventListener("click",POOqt13)
+//document.getElementById("btPOO14")?.addEventListener("click",POOqt14)

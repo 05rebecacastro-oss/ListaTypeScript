@@ -38,13 +38,17 @@ class BichinhoVirtual{
         this.idade = novaIdade
     }
 }
-let nome:string = String(prompt("qual vai ser o nome do nosso bichinho?"))
-let idade:number = Number(prompt("qual a idade que o nosso bichinho vai ter?"))
-let fome:number = Number(prompt("me diga um numero de 0 a 100 do quanto nosso bichinho está com fome:"))
-let saude:number = Number(prompt("me diga um numero de 0 a 100 de quanto o nosso bichinho está bem de saúde"))
+let op: number = 1
+let novobichinho:BichinhoVirtual
 
-let op:number = Number(prompt("deseja continuar? (1-sim, 2-nao)"))
 while(op != 2){
+    let nome:string = String(prompt("qual vai ser o nome do nosso bichinho?"))
+    let idade:number = Number(prompt("qual a idade que o nosso bichinho vai ter?"))
+    let fome:number = Number(prompt("me diga um numero de 0 a 100 do quanto nosso bichinho está com fome:"))
+    let saude:number = Number(prompt("me diga um numero de 0 a 100 de quanto o nosso bichinho está bem de saúde"))
+
+   
+
     if(fome >= 0 && fome <= 25 || saude >= 0 && saude <= 25){
         console.log("nosso bichinho virtual está bravo e muito doente")
     }else if(fome >= 26 && fome <= 50 || saude >= 26 && saude <= 50){
@@ -54,9 +58,13 @@ while(op != 2){
     }else if(fome >= 76 && fome <= 100 || saude >= 76 && saude <= 100){
         console.log("nosso bichinho virtual está tranquilo e com alergia")
     }
+    novobichinho = new BichinhoVirtual(nome, fome, saude, idade)
+    novobichinho.exibirBichinho()
+    op = Number(prompt("deseja continuar? (1-sim, 2-nao)"))
 }
 
-let novobichinho:BichinhoVirtual = new BichinhoVirtual(nome, fome, saude, idade)
-novobichinho.exibirBichinho()
-}
 
+
+
+
+}
