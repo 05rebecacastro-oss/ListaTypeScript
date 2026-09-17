@@ -1,13 +1,13 @@
     body {
-        background-color: #c4c4c4;
+        background-color: #ffffff;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 20px;
-        color: #1a2b4c;
+        color: #4c75c7;
     }
 
     h1, h2 {
-        color: #3178C6;
-        border-bottom: 2px solid #00ee57;
+        color: #af6bee;
+        border-bottom: 2px solid #0097ee;
         padding-bottom: 8px;
     }
     h3 {
