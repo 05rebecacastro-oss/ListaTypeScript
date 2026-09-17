@@ -4,8 +4,21 @@
 // FuncionarioHorista e FuncionarioAssalariado como subclasses. O programa deve solicitar os dados
 // via teclado e calcular o salário de cada um.
 
-class Funcionários{
+abstract class Funcionários{
     nome:string
-    salarioFinal:number
+
+    constructor(nome:string){
+        this.nome = nome
+    }
+
+    calcularSalario():void{
+
+    }
     
+}
+
+class FuncionarioHorista extends Funcionários{
+    calcularSalario(): void {
+        
+    }
 }
