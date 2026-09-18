@@ -62,9 +62,4 @@ while(op != 2){
     novobichinho.exibirBichinho()
     op = Number(prompt("deseja continuar? (1-sim, 2-nao)"))
 }
-
-
-
-
-
 }
