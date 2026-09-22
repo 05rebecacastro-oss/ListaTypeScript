@@ -12,7 +12,10 @@ import { POOqt10 } from "./POO/questao10.js";
 import { POOqt11 } from "./POO/questao11.js";
 import { POOqt12 } from "./POO/questao12.js";
 import { POOqt13 } from "./POO/questao13.js";
-//import { POOqt14 } from "./POO/questao14.js";
+import { POOqt14 } from "./POO/questao14.js";
+import { POOqt15 } from "./POO/questao15.js";
+import { POOqt16 } from "./POO/questao16.js";
+import { POOqt17 } from "./POO/questao17.js";
 
 document.getElementById("btPOO1")?.addEventListener("click",POOqt1)
 document.getElementById("btPOO2")?.addEventListener("click",POOqt2)
@@ -27,4 +30,8 @@ document.getElementById("btPOO10")?.addEventListener("click",POOqt10)
 document.getElementById("btPOO11")?.addEventListener("click",POOqt11)
 document.getElementById("btPOO12")?.addEventListener("click",POOqt12)
 document.getElementById("btPOO13")?.addEventListener("click",POOqt13)
-//document.getElementById("btPOO14")?.addEventListener("click",POOqt14)
+document.getElementById("btPOO14")?.addEventListener("click",POOqt14)
+document.getElementById("btPOO15")?.addEventListener("click",POOqt15)
+document.getElementById("btPOO16")?.addEventListener("click",POOqt16)
+document.getElementById("btPOO17")?.addEventListener("click",POOqt17)
+
