@@ -15,7 +15,6 @@ abstract class Refeitorio{
     constructor( nome:string,identificador:number){
         this.nome = nome
         this.identificador = identificador
-        
     }
     exibir():void{
 
@@ -82,6 +81,8 @@ while(op == 3){
         for(let i=0; i<historico.length; i++){
             historico[i].exibir()
         }
+    }else{
+            console.log("opçao invalida")
     }
     let quantAlunos:number = 0
     let quantServidores:number = 0
@@ -102,9 +103,5 @@ while(op == 3){
         console.log(`Total de servidores: ${quantServidores}`)
         console.log(`Total geral: ${historico.length}`)
         console.log("Encerrando....")
-
-        else{
-            console.log("opçao invalida")
-        }
 }
 }

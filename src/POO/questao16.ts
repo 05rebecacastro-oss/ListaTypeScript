@@ -102,7 +102,7 @@ class Aves extends Animal{
     }
 
     exibirAnimal(): void {
-        console.log(`nome ${this.nome}| idade ${this.idade}| especie ${this.especie}| sexo ${this.sexo}| migratoria ${this.migratoria ? "sim"}`)
+        console.log(`nome ${this.nome}| idade ${this.idade}| especie ${this.especie}| sexo ${this.sexo}| migratoria ${this.migratoria} ? "sim"`)
     }
 }
 
@@ -125,7 +125,7 @@ while(op != 4){
         let especie:string = String(prompt("qual a especie dele?"))
         let sexo:string = String(prompt("qual o sexo dele?"))
         let tipoAlimentacao:string = String(prompt("qual o tipo de alimentacao dele?"))
-        let mamiferos:Mamiferos = new Mamiferos(nome,idade,especie,sexo,tipoAlimentacao)
+        let mamiferos:Mamiferos = new Mamiferos(nome,especie,idade,sexo,tipoAlimentacao)
 
         listaAnimal.push(mamiferos)
         console.log("mamifero cadastrado com sucesso!")
@@ -143,9 +143,9 @@ while(op != 4){
         }else{
             migratoria = false
         }
-        let Aves:Aves = new Aves(nome,idade,especie,sexo,migratoria)
+        let aves:Aves = new Aves(nome,especie,idade,sexo,migratoria)
 
-        listaAnimal.push(Aves)
+        listaAnimal.push(aves)
         console.log("Ave cadastrada com sucesso!")
     }
     else if (op == 3){
