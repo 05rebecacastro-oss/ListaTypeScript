@@ -49,8 +49,8 @@ for(let i=0; i<estoque; i++){
 }
 
 for(let i=0; i<estoque; i++){
-   // if(listaMedicamento[i];
-  //      listaMedicamento[i].exibirMedicamento()
-   // )
+   if(listaMedicamento[i].qnt<5){
+        listaMedicamento[i].exibirMedicamento()
+   }
 }
 }

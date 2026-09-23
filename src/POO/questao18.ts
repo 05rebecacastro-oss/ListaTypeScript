@@ -58,8 +58,7 @@ abstract class Funcionarios{
     exibirFuncionario():void{
 
     }
-    calcularSalario(regime:string):void{
-
+    public calcularSalario():void{
     }
 }
 
@@ -79,8 +78,8 @@ class Professor extends Funcionarios{
     exibirFuncionario(){
         console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| regime de trabalho ${this._regimeTrabalho}`)
     }
-    calcularSalario(regimeTrabalho:string): number {
-        if (regimeTrabalho == "s"){
+    calcularSalario(): number {
+        if (this._regimeTrabalho == "s"){
             this.salarioBase = this.salarioBase + this.salarioBase * (20/100)
         }else{
             this.salarioBase
@@ -104,8 +103,8 @@ class TecnicoAdm extends Funcionarios{
     exibirFuncionario():void{
         console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| auxilio Alimentacao ${this.auxilioAlimentacao}`)
     }
-    calcularSalario(salarioBase:number,auxilioAlimentacao:number):number{
-        let calculo = salarioBase + auxilioAlimentacao
+    calcularSalario():number{
+        let calculo = this.salarioBase + this._auxilioAlimentacao
         return calculo
     }
 }
@@ -133,8 +132,8 @@ class Diretor extends Funcionarios{
     exibirFuncionario():void{
         console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}|departamento ${this.departamento}| gratificacao ${this._gratificacao}`)
     }
-    calcularSalario(salarioBase:number,gratificacao:number):number{
-        let calcular = salarioBase + gratificacao
+    calcularSalario():number{
+        let calcular = this.salarioBase + this._gratificacao
         return calcular
     }
 }
@@ -153,7 +152,7 @@ while(op != 4){
         contProf += 1
 
         let novoProfessor:Professor = new Professor(nome,matricula,salarioBase,regimeTrabalho)
-        novoProfessor.calcularSalario(regimeTrabalho)
+        novoProfessor.calcularSalario()
     }else if (op == 2){
         let nome:string = String(prompt("qual o seu nome?"))
         let matricula:number = Number(prompt("qual é sua matricula?"))
@@ -163,7 +162,7 @@ while(op != 4){
         contTecnic += 1
 
         let novoTecnico:TecnicoAdm = new TecnicoAdm(nome,matricula,salarioBase,auxilioAlimentacao)
-        novoTecnico.calcularSalario(salarioBase,auxilioAlimentacao)
+        novoTecnico.calcularSalario()
     }else if (op == 3){
         let nome:string = String(prompt("qual o seu nome?"))
         let matricula:number = Number(prompt("qual é sua matricula?"))
@@ -174,7 +173,7 @@ while(op != 4){
         contDiretor += 1
 
         let novoDiretor:Diretor = new Diretor(nome,matricula,salarioBase,departamento,gratificacao)
-        novoDiretor.calcularSalario(salarioBase,gratificacao)
+        novoDiretor.calcularSalario()
     }
 }
 let custoTotal = contProf + contTecnic + contDiretor
