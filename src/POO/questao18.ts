@@ -26,7 +26,7 @@
 // interrompido e o software exibirá um relatório final contendo o custo total gasto com os professores, o
 // custo total com os técnicos administrativos, o custo total com os diretores e, por último, o custo total
 // geral que a instituição terá com a folha de pagamento daquele mês.
-
+export function POOqt18(): void {
 abstract class Funcionarios{
     private _nome: string
     private _matricula: number
@@ -138,6 +138,9 @@ class Diretor extends Funcionarios{
         return calcular
     }
 }
+ let contProf:number = 0
+ let contTecnic:number = 0
+ let contDiretor:number = 0
 let op:number = 0
 while(op != 4){
     op = Number(prompt("qual opcao voce quer calcular o salario: 1-professor, 2- tecnico administrativo, 3- diretor, 4- sair"))
@@ -146,6 +149,8 @@ while(op != 4){
         let matricula:number = Number(prompt("qual é sua matricula?"))
         let salarioBase:number = Number(prompt("qual seu salario base?"))
         let regimeTrabalho:string = String(prompt("voce se dedicou exclusivamente no seu trabalho? (s/n)")).toLowerCase()
+       
+        contProf += 1
 
         let novoProfessor:Professor = new Professor(nome,matricula,salarioBase,regimeTrabalho)
         novoProfessor.calcularSalario(regimeTrabalho)
@@ -154,6 +159,8 @@ while(op != 4){
         let matricula:number = Number(prompt("qual é sua matricula?"))
         let salarioBase:number = Number(prompt("qual seu salario base?"))
         let auxilioAlimentacao:number = Number(prompt("quanto é o seu auxilio alimentacao"))
+        
+        contTecnic += 1
 
         let novoTecnico:TecnicoAdm = new TecnicoAdm(nome,matricula,salarioBase,auxilioAlimentacao)
         novoTecnico.calcularSalario(salarioBase,auxilioAlimentacao)
@@ -163,8 +170,18 @@ while(op != 4){
         let salarioBase:number = Number(prompt("qual seu salario base?"))
         let departamento:string = String(prompt("qual o departamento que voce trabalha?"))
         let gratificacao:number = Number(prompt("quanto foi a gratificacao recebida?"))
+        
+        contDiretor += 1
 
         let novoDiretor:Diretor = new Diretor(nome,matricula,salarioBase,departamento,gratificacao)
         novoDiretor.calcularSalario(salarioBase,gratificacao)
     }
+}
+let custoTotal = contProf + contTecnic + contDiretor
+ console.log("TOTAL DE PAGAMENTOS DOS PROFESSORES")
+
+    console.log(`Custo total com professores: R$ ${contProf.toFixed(2)}`);
+    console.log(`Custo total com técnicos administrativos: R$ ${contTecnic.toFixed(2)}`);
+    console.log(`Custo total com diretores: R$ ${contDiretor.toFixed(2)}`);
+    console.log(`Custo total geral da folha: R$ ${custoTotal.toFixed(2)}`);
 }
