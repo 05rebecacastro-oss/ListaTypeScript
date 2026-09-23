@@ -104,7 +104,7 @@ class TecnicoAdm extends Funcionarios{
     exibirFuncionario():void{
         console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| auxilio Alimentacao ${this.auxilioAlimentacao}`)
     }
-    calcularSalario():number{
+    calcularSalario(salarioBase:number,auxilioAlimentacao:number):number{
         let calculo = salarioBase + auxilioAlimentacao
         return calculo
     }
@@ -133,7 +133,7 @@ class Diretor extends Funcionarios{
     exibirFuncionario():void{
         console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}|departamento ${this.departamento}| gratificacao ${this._gratificacao}`)
     }
-    calcularSalario():number{
+    calcularSalario(salarioBase:number,gratificacao:number):number{
         let calcular = salarioBase + gratificacao
         return calcular
     }
@@ -155,7 +155,16 @@ while(op != 4){
         let salarioBase:number = Number(prompt("qual seu salario base?"))
         let auxilioAlimentacao:number = Number(prompt("quanto é o seu auxilio alimentacao"))
 
-        let novoProfessor:Professor = new Professor(nome,matricula,salarioBase,regimeTrabalho)
-        novoProfessor.calcularSalario()
+        let novoTecnico:TecnicoAdm = new TecnicoAdm(nome,matricula,salarioBase,auxilioAlimentacao)
+        novoTecnico.calcularSalario(salarioBase,auxilioAlimentacao)
+    }else if (op == 3){
+        let nome:string = String(prompt("qual o seu nome?"))
+        let matricula:number = Number(prompt("qual é sua matricula?"))
+        let salarioBase:number = Number(prompt("qual seu salario base?"))
+        let departamento:string = String(prompt("qual o departamento que voce trabalha?"))
+        let gratificacao:number = Number(prompt("quanto foi a gratificacao recebida?"))
+
+        let novoDiretor:Diretor = new Diretor(nome,matricula,salarioBase,departamento,gratificacao)
+        novoDiretor.calcularSalario(salarioBase,gratificacao)
     }
 }

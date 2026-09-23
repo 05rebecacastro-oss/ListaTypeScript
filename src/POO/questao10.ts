@@ -37,6 +37,10 @@ class BichinhoVirtual{
     alterarIdade(novaIdade:number):void{
         this.idade = novaIdade
     }
+    calculoHumor(saude:number,fome:number): number{
+        return (saude + (10 - fome)) / 2
+       
+    }
 }
 let op: number = 1
 let novobichinho:BichinhoVirtual
@@ -44,22 +48,24 @@ let novobichinho:BichinhoVirtual
 while(op != 2){
     let nome:string = String(prompt("qual vai ser o nome do nosso bichinho?"))
     let idade:number = Number(prompt("qual a idade que o nosso bichinho vai ter?"))
-    let fome:number = Number(prompt("me diga um numero de 0 a 100 do quanto nosso bichinho está com fome:"))
-    let saude:number = Number(prompt("me diga um numero de 0 a 100 de quanto o nosso bichinho está bem de saúde"))
+    let fome:number = Number(prompt("me diga um numero de 0 a 10 do quanto nosso bichinho está com fome:"))
+    let saude:number = Number(prompt("me diga um numero de 0 a 10 de quanto o nosso bichinho está bem de saúde"))
+
+    novobichinho = new BichinhoVirtual(nome, fome, saude, idade)
+    let media = novobichinho.calculoHumor(saude,fome)
+
+    if(media >= 8 && media <= 10){
+        console.log("ele está muito feliz!!")
+    }else if(media >= 5 && media < 8){
+        console.log("ele está neutro/ok")
+    }else if(media < 5){
+        console.log("ele está triste e transtornado ")
+    }
 
    
-
-    if(fome >= 0 && fome <= 25 || saude >= 0 && saude <= 25){
-        console.log("nosso bichinho virtual está bravo e muito doente")
-    }else if(fome >= 26 && fome <= 50 || saude >= 26 && saude <= 50){
-        console.log("nosso bichinho virtual está irritado e um pouco doente")
-    }else if(fome >= 51 && fome <= 75 || saude >= 51 && saude <= 75){
-        console.log("nosso bichinho virtual está tranquilo e com alergia")
-    }else if(fome >= 76 && fome <= 100 || saude >= 76 && saude <= 100){
-        console.log("nosso bichinho virtual está tranquilo e com alergia")
-    }
-    novobichinho = new BichinhoVirtual(nome, fome, saude, idade)
     novobichinho.exibirBichinho()
+    console.log(`Humor ${media}`)
+    
     op = Number(prompt("deseja continuar? (1-sim, 2-nao)"))
 }
 }
