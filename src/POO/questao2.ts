@@ -28,4 +28,5 @@ class quadrado {
     
     novoQuadrado:quadrado = new quadrado(0)
 }
+
 }
