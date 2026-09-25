@@ -2,32 +2,32 @@
 //  Atributos: Cor, circunferência, material
 //  Métodos: trocaCor e mostraCor
 
-export function POOqt1():void{
-class Bola{
-    cor: string = "azul"
-    circunferencia: number
-    material: string
+export function POOqt1(): void {
+    class Bola {
+        cor: string = "azul"
+        circunferencia: number
+        material: string
 
-    constructor( cor: string, circunferencia: number, material: string)
-{
-    this.cor= cor
-    this.circunferencia = circunferencia
-    this.material = material
+        constructor(cor: string, circunferencia: number, material: string) {
+            this.cor = cor
+            this.circunferencia = circunferencia
+            this.material = material
+
+        }
+        exibirbola(): void {
+            console.log(`cor: ${this.cor} | circunferencia: ${this.circunferencia} | material: ${this.material}`)
+        }
+
+        trocarcor(novacor: string): void {
+            novacor = "vermelho"
+            this.trocarcor
+        }
+
+        mostrarcor(): void {
+            this.trocarcor
+        }
         
     }
-    exibirbola():void{
-        console.log(`cor: ${this.cor} | circunferencia: ${this.circunferencia} | material: ${this.material}`)
-    }
-    
-    trocarcor(novacor:string):void{
-        novacor = "vermelho"
-        this.trocarcor
-    }
-
-    mostrarcor():void{
-        this.trocarcor
-    }
-    novaBola:Bola = new
-    Bola("azul",1.22,"ferro")
-}
+    let novaBola: Bola = new Bola("azul", 1.22, "ferro")
+            novaBola.exibirbola()
 }

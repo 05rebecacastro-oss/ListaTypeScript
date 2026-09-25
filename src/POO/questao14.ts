@@ -9,7 +9,7 @@ export function POOqt14(): void {
         public anoPublicacao: number
         public disponibilidade: boolean
 
-        constructor(titulo: string, autor: string, anoPublicacao: number,disponibilidade:boolean) {
+        constructor(titulo: string, autor: string, anoPublicacao: number, disponibilidade: boolean) {
             this.titulo = titulo
             this.autor = autor
             this.anoPublicacao = anoPublicacao
@@ -23,7 +23,7 @@ export function POOqt14(): void {
 
     let listaLivro: Livro[] = []
     let op: number = 1
-     let disponibilidade:boolean
+    let disponibilidade: boolean
 
     let quantidade: number = Number(prompt("informe quntos livros vc quer cadastrar:"))
 
@@ -34,20 +34,19 @@ export function POOqt14(): void {
         let titulo: string = String(prompt("qual o titulo desse livro?"))
         let autor: string = String(prompt("qual o autor desse livro?"))
         let anoPublicacao: number = Number(prompt("qual é o ano que esse livro foi publicado?"))
-        let disp:number = Number(prompt("O livro tem disponibilidade? 1-Sim 2-Não"))
+        let disp: number = Number(prompt("O livro tem disponibilidade? 1-Sim 2-Não"))
 
-        if(disp == 1){
-            disponibilidade  = true 
-        }else{
+        if (disp == 1) {
+            disponibilidade = true
+        } else {
             disponibilidade = false
         }
 
-    let novoLivro: Livro = new Livro(titulo, autor, anoPublicacao,disponibilidade)
-    listaLivro.push(novoLivro)
+        let novoLivro: Livro = new Livro(titulo, autor, anoPublicacao, disponibilidade)
+        listaLivro.push(novoLivro)
 
-    for (let i = 0; i < listaLivro.length; i++) {
-        listaLivro[i].exibirLivro()
+        for (let i = 0; i < listaLivro.length; i++) {
+            listaLivro[i].exibirLivro()
+        }
     }
 }
-}
-

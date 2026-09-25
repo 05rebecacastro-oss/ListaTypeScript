@@ -27,157 +27,157 @@
 // custo total com os técnicos administrativos, o custo total com os diretores e, por último, o custo total
 // geral que a instituição terá com a folha de pagamento daquele mês.
 export function POOqt18(): void {
-abstract class Funcionarios{
-    private _nome: string
-    private _matricula: number
-    private _salarioBase: number
+    abstract class Funcionarios {
+        private _nome: string
+        private _matricula: number
+        private _salarioBase: number
 
-    constructor(nome:string, matricula:number, salarioBase:number){
-        this._nome = nome
-        this._matricula = matricula
-        this._salarioBase = salarioBase
-    }
-    public get nome(): string {
-        return this._nome
-    }
-    public set nome(value: string) {
-        this._nome = value
-    }
-     public get matricula(): number {
-        return this._matricula
-    }
-    public set matricula(value: number) {
-        this._matricula = value
-    }
-     public get salarioBase(): number {
-        return this._salarioBase
-    }
-    public set salarioBase(value: number) {
-        this._salarioBase = value
-    }
-    exibirFuncionario():void{
-
-    }
-    public calcularSalario():void{
-    }
-}
-
-class Professor extends Funcionarios{
-    private _regimeTrabalho: string
-   
-    constructor(nome:string, matricula:number, salarioBase:number,regimeTrabalho:string){
-        super(nome,matricula,salarioBase)
-        this._regimeTrabalho = regimeTrabalho
-    }
-     public get regimeTrabalho(): string {
-        return this._regimeTrabalho
-    }
-    public set regimeTrabalho(value: string) {
-        this._regimeTrabalho = value
-    }
-    exibirFuncionario(){
-        console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| regime de trabalho ${this._regimeTrabalho}`)
-    }
-    calcularSalario(): number {
-        if (this._regimeTrabalho == "s"){
-            this.salarioBase = this.salarioBase + this.salarioBase * (20/100)
-        }else{
-            this.salarioBase
+        constructor(nome: string, matricula: number, salarioBase: number) {
+            this._nome = nome
+            this._matricula = matricula
+            this._salarioBase = salarioBase
         }
-        return this.salarioBase
-    }
-}
-class TecnicoAdm extends Funcionarios{
-    private _auxilioAlimentacao:number = 1000
+        public get nome(): string {
+            return this._nome
+        }
+        public set nome(value: string) {
+            this._nome = value
+        }
+        public get matricula(): number {
+            return this._matricula
+        }
+        public set matricula(value: number) {
+            this._matricula = value
+        }
+        public get salarioBase(): number {
+            return this._salarioBase
+        }
+        public set salarioBase(value: number) {
+            this._salarioBase = value
+        }
+        exibirFuncionario(): void {
 
-    constructor(nome:string, matricula:number, salarioBase:number,auxilioAlimentacao:number){
-        super(nome,matricula,salarioBase)
-        this._auxilioAlimentacao = auxilioAlimentacao
+        }
+        public calcularSalario(): void {
+        }
     }
-    public get auxilioAlimentacao(): number {
-        return this._auxilioAlimentacao
-    }
-    public set auxilioAlimentacao(value: number) {
-        this._auxilioAlimentacao = value
-    }
-    exibirFuncionario():void{
-        console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| auxilio Alimentacao ${this.auxilioAlimentacao}`)
-    }
-    calcularSalario():number{
-        let calculo = this.salarioBase + this._auxilioAlimentacao
-        return calculo
-    }
-}
-class Diretor extends Funcionarios{
-    private _departamento:string
-    private _gratificacao:number
 
-    constructor(nome:string, matricula:number, salarioBase:number,departamento:string, gratificacao:number){
-        super(nome,matricula,salarioBase)
-        this._departamento = departamento
-        this._gratificacao = gratificacao
-    }
-    public get departamento(): string {
-        return this._departamento
-    }
-    public set departamento(value: string) {
-        this._departamento = value
-    }
-    public get gratificacao(): number {
-        return this._gratificacao
-    }
-    public set gratificacao(value: number) {
-        this._gratificacao = value
-    }
-    exibirFuncionario():void{
-        console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}|departamento ${this.departamento}| gratificacao ${this._gratificacao}`)
-    }
-    calcularSalario():number{
-        let calcular = this.salarioBase + this._gratificacao
-        return calcular
-    }
-}
- let contProf:number = 0
- let contTecnic:number = 0
- let contDiretor:number = 0
-let op:number = 0
-while(op != 4){
-    op = Number(prompt("qual opcao voce quer calcular o salario: 1-professor, 2- tecnico administrativo, 3- diretor, 4- sair"))
-    if (op == 1){
-        let nome:string = String(prompt("qual o seu nome?"))
-        let matricula:number = Number(prompt("qual é sua matricula?"))
-        let salarioBase:number = Number(prompt("qual seu salario base?"))
-        let regimeTrabalho:string = String(prompt("voce se dedicou exclusivamente no seu trabalho? (s/n)")).toLowerCase()
-       
-        contProf += 1
+    class Professor extends Funcionarios {
+        private _regimeTrabalho: string
 
-        let novoProfessor:Professor = new Professor(nome,matricula,salarioBase,regimeTrabalho)
-        novoProfessor.calcularSalario()
-    }else if (op == 2){
-        let nome:string = String(prompt("qual o seu nome?"))
-        let matricula:number = Number(prompt("qual é sua matricula?"))
-        let salarioBase:number = Number(prompt("qual seu salario base?"))
-        let auxilioAlimentacao:number = Number(prompt("quanto é o seu auxilio alimentacao"))
-        
-        contTecnic += 1
-
-        let novoTecnico:TecnicoAdm = new TecnicoAdm(nome,matricula,salarioBase,auxilioAlimentacao)
-        novoTecnico.calcularSalario()
-    }else if (op == 3){
-        let nome:string = String(prompt("qual o seu nome?"))
-        let matricula:number = Number(prompt("qual é sua matricula?"))
-        let salarioBase:number = Number(prompt("qual seu salario base?"))
-        let departamento:string = String(prompt("qual o departamento que voce trabalha?"))
-        let gratificacao:number = Number(prompt("quanto foi a gratificacao recebida?"))
-        
-        contDiretor += 1
-
-        let novoDiretor:Diretor = new Diretor(nome,matricula,salarioBase,departamento,gratificacao)
-        novoDiretor.calcularSalario()
+        constructor(nome: string, matricula: number, salarioBase: number, regimeTrabalho: string) {
+            super(nome, matricula, salarioBase)
+            this._regimeTrabalho = regimeTrabalho
+        }
+        public get regimeTrabalho(): string {
+            return this._regimeTrabalho
+        }
+        public set regimeTrabalho(value: string) {
+            this._regimeTrabalho = value
+        }
+        exibirFuncionario() {
+            console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| regime de trabalho ${this._regimeTrabalho}`)
+        }
+        calcularSalario(): number {
+            if (this._regimeTrabalho == "s") {
+                this.salarioBase = this.salarioBase + this.salarioBase * (20 / 100)
+            } else {
+                this.salarioBase
+            }
+            return this.salarioBase
+        }
     }
-}
-let custoTotal = contProf + contTecnic + contDiretor
- console.log("TOTAL DE PAGAMENTOS DOS PROFESSORES")
+    class TecnicoAdm extends Funcionarios {
+        private _auxilioAlimentacao: number = 1000
+
+        constructor(nome: string, matricula: number, salarioBase: number, auxilioAlimentacao: number) {
+            super(nome, matricula, salarioBase)
+            this._auxilioAlimentacao = auxilioAlimentacao
+        }
+        public get auxilioAlimentacao(): number {
+            return this._auxilioAlimentacao
+        }
+        public set auxilioAlimentacao(value: number) {
+            this._auxilioAlimentacao = value
+        }
+        exibirFuncionario(): void {
+            console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}| auxilio Alimentacao ${this.auxilioAlimentacao}`)
+        }
+        calcularSalario(): number {
+            let calculo = this.salarioBase + this._auxilioAlimentacao
+            return calculo
+        }
+    }
+    class Diretor extends Funcionarios {
+        private _departamento: string
+        private _gratificacao: number
+
+        constructor(nome: string, matricula: number, salarioBase: number, departamento: string, gratificacao: number) {
+            super(nome, matricula, salarioBase)
+            this._departamento = departamento
+            this._gratificacao = gratificacao
+        }
+        public get departamento(): string {
+            return this._departamento
+        }
+        public set departamento(value: string) {
+            this._departamento = value
+        }
+        public get gratificacao(): number {
+            return this._gratificacao
+        }
+        public set gratificacao(value: number) {
+            this._gratificacao = value
+        }
+        exibirFuncionario(): void {
+            console.log(`nome ${this.nome}| matricula ${this.matricula}| salario base ${this.salarioBase}|departamento ${this.departamento}| gratificacao ${this._gratificacao}`)
+        }
+        calcularSalario(): number {
+            let calcular = this.salarioBase + this._gratificacao
+            return calcular
+        }
+    }
+    let contProf: number = 0
+    let contTecnic: number = 0
+    let contDiretor: number = 0
+    let op: number = 0
+    while (op != 4) {
+        op = Number(prompt("qual opcao voce quer calcular o salario: 1-professor, 2- tecnico administrativo, 3- diretor, 4- sair"))
+        if (op == 1) {
+            let nome: string = String(prompt("qual o seu nome?"))
+            let matricula: number = Number(prompt("qual é sua matricula?"))
+            let salarioBase: number = Number(prompt("qual seu salario base?"))
+            let regimeTrabalho: string = String(prompt("voce se dedicou exclusivamente no seu trabalho? (s/n)")).toLowerCase()
+
+            contProf += 1
+
+            let novoProfessor: Professor = new Professor(nome, matricula, salarioBase, regimeTrabalho)
+            novoProfessor.calcularSalario()
+        } else if (op == 2) {
+            let nome: string = String(prompt("qual o seu nome?"))
+            let matricula: number = Number(prompt("qual é sua matricula?"))
+            let salarioBase: number = Number(prompt("qual seu salario base?"))
+            let auxilioAlimentacao: number = Number(prompt("quanto é o seu auxilio alimentacao"))
+
+            contTecnic += 1
+
+            let novoTecnico: TecnicoAdm = new TecnicoAdm(nome, matricula, salarioBase, auxilioAlimentacao)
+            novoTecnico.calcularSalario()
+        } else if (op == 3) {
+            let nome: string = String(prompt("qual o seu nome?"))
+            let matricula: number = Number(prompt("qual é sua matricula?"))
+            let salarioBase: number = Number(prompt("qual seu salario base?"))
+            let departamento: string = String(prompt("qual o departamento que voce trabalha?"))
+            let gratificacao: number = Number(prompt("quanto foi a gratificacao recebida?"))
+
+            contDiretor += 1
+
+            let novoDiretor: Diretor = new Diretor(nome, matricula, salarioBase, departamento, gratificacao)
+            novoDiretor.calcularSalario()
+        }
+    }
+    let custoTotal = contProf + contTecnic + contDiretor
+    console.log("TOTAL DE PAGAMENTOS DOS PROFESSORES")
 
     console.log(`Custo total com professores: R$ ${contProf.toFixed(2)}`);
     console.log(`Custo total com técnicos administrativos: R$ ${contTecnic.toFixed(2)}`);

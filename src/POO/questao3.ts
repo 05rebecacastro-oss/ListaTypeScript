@@ -5,34 +5,38 @@
 // Retornar valor dos lados,
 // Calcular Área,
 // Calcular Perímetro.
-export function POOqt3():void{
-class Retangulo{
-    ladoA:number
-    ladoB:number
+export function POOqt3(): void {
+    class Retangulo {
+        ladoA: number
+        ladoB: number
 
-    constructor(ladoA:number,ladoB:number){
-        this.ladoA = ladoA
-        this.ladoB = ladoB
-    }
+        constructor(ladoA: number, ladoB: number) {
+            this.ladoA = ladoA
+            this.ladoB = ladoB
+        }
 
-    exibirRetangulo():void{
-        console.log(`ladoA ${this.ladoA} | ladoB ${this.ladoB}`)
-    }
+        exibirRetangulo(): void {
+            console.log(`ladoA ${this.ladoA} | ladoB ${this.ladoB}`)
+        }
 
-    mudarValor(novoladoA:number,novoladoB:number):void{
-        this.ladoA = novoladoA
-        this.ladoB = novoladoB
-        
-    }
+        mudarValor(novoladoA: number, novoladoB: number): void {
+            this.ladoA = novoladoA
+            this.ladoB = novoladoB
 
-    calcularArea():any{
-        let areaB =  this.ladoA * this.ladoB
-        console.log(" Área é:" +areaB)
-    }
+        }
 
-    calcularPerimetro():any{
-        let perimetro = 2*(this.ladoA + this.ladoB)
-        console.log("o perimetro é:" + perimetro)
+        calcularArea(): any {
+            let areaB = this.ladoA * this.ladoB
+            console.log(" Área é:" + areaB)
+        }
+
+        calcularPerimetro(): any {
+            let perimetro = 2 * (this.ladoA + this.ladoB)
+            console.log("o perimetro é:" + perimetro)
+        }
     }
-}
+    let novoRetangulo = new Retangulo(10,5)
+    novoRetangulo.exibirRetangulo()
+    novoRetangulo.calcularArea()
+    novoRetangulo.calcularPerimetro()
 }

@@ -7,26 +7,27 @@
 //  Atributos: Tamanho do lado
 //  Métodos: Mudar valor do Lado,
 //  Retornar valor do Lado e calcular Área;
-export function POOqt2():void{
-class quadrado {
-    tamanhoLado:number 
+export function POOqt2(): void {
+    class quadrado {
+        tamanhoLado: number
 
 
-    constructor(tamanhoLado:number){
-        this.tamanhoLado = tamanhoLado
+        constructor(tamanhoLado: number) {
+            this.tamanhoLado = tamanhoLado
+        }
+
+        exibirQuadrado(): void {
+            console.log(`tamanho ${this.tamanhoLado}`)
+        }
+
+        mudarValor(novoValor: number): number {
+            let area = novoValor * novoValor
+            return area
+
+        }
+
+        
     }
-
-    exibirQuadrado():void{
-        console.log(`tamanho ${this.tamanhoLado}`)
-    }
-
-    mudarValor(novoValor:number):number{
-        let area = novoValor * novoValor
-        return area
-    
-    }
-    
-    novoQuadrado:quadrado = new quadrado(0)
-}
-
+    let novoQuadrado: quadrado = new quadrado(0)
+    novoQuadrado.exibirQuadrado()
 }

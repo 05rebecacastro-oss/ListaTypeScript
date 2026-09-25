@@ -6,17 +6,17 @@
 // faz uma busca na lista para identificar e exibir os dados do atleta que concluiu a prova no menor
 // tempo (o campeão da prova).
 export function POOqt43(): void {
-    class Atleta{
+    class Atleta {
         private _nome: string
         private _idade: number
         private _tempoMinuto: number
 
-        constructor(nome:string,idade:number,tempoMinuto:number){
+        constructor(nome: string, idade: number, tempoMinuto: number) {
             this._nome = nome
             this._idade = idade
             this._tempoMinuto = tempoMinuto
         }
-        
+
         public get nome(): string {
             return this._nome
         }
@@ -36,35 +36,35 @@ export function POOqt43(): void {
             this._tempoMinuto = value
         }
 
-        exibirAtleta():void{
+        exibirAtleta(): void {
             console.log(`nome ${this.nome}| idade ${this.idade}| tempoMinuto ${this.tempoMinuto}`)
         }
 
     }
 
-    let listaAtleta:Atleta[] = []
-    let op:number = 1
+    let listaAtleta: Atleta[] = []
+    let op: number = 1
     while (op != 2) {
         op = Number(prompt("escolha uma opçao: 1-cadastrar atleta, 2-sair"))
-        let nome:string = String(prompt("informe o nome:"))
-        let idade:number = Number(prompt("informe a idade:"))
-        let tempoMinuto:number = Number(prompt("informe o tempo por minuto:"))
+        let nome: string = String(prompt("informe o nome:"))
+        let idade: number = Number(prompt("informe a idade:"))
+        let tempoMinuto: number = Number(prompt("informe o tempo por minuto:"))
 
-        let novoAtleta:Atleta = new Atleta(nome,idade,tempoMinuto)
+        let novoAtleta: Atleta = new Atleta(nome, idade, tempoMinuto)
         listaAtleta.push(novoAtleta)
 
     }
     if (listaAtleta.length > 0) {
 
-    let campeao = listaAtleta[0]
+        let campeao = listaAtleta[0]
 
-    for (let i = 1; i < listaAtleta.length; i++) {
+        for (let i = 1; i < listaAtleta.length; i++) {
 
-        if (listaAtleta[i].tempoMinuto < campeao.tempoMinuto) {
-            campeao = listaAtleta[i]
+            if (listaAtleta[i].tempoMinuto < campeao.tempoMinuto) {
+                campeao = listaAtleta[i]
+            }
         }
-    }
-    console.log("CAMPEÃO DA PROVA")
-    campeao.exibirAtleta
+        console.log("CAMPEÃO DA PROVA")
+        campeao.exibirAtleta
     }
 }
