@@ -65,7 +65,7 @@ export function POOqt35(): void {
 
     let op: number = 0
     while (op !== 3) {
-        op = Number(prompt("escolha uma opcao:(1-paciente comum, 2- paciente proprietario)"))
+        op = Number(prompt("escolha uma opcao:(1-paciente comum, 2- paciente proprietario, 3-sair)"))
 
         if (op == 1) {
             let nome: string = String(prompt("informe seu nome:"))

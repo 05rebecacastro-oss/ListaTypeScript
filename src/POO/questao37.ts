@@ -10,7 +10,7 @@
 // cadastrados.
 
 export function POOqt37(): void {
-    abstract class Consumidor {
+    class Consumidor {
         private _numeroConta: number
         private _quantidadeKWH: number
 
@@ -31,33 +31,26 @@ export function POOqt37(): void {
         public set quantidadeKWH(value: number) {
             this._quantidadeKWH = value
         }
-        abstract calculo(): number;
+        calculo(): void{}
     }
 
     class ConsumidorResidencial extends Consumidor {
-        constructor(numeroConta: number, quantidadeKWH: number) {
-            super(numeroConta, quantidadeKWH)
-        }
-
-        calculo(): number {
-            this.quantidadeKWH = this.quantidadeKWH * 0.75
-            return this.quantidadeKWH
+        calculo(): void {
+            let valorKwH: number  = this.quantidadeKWH * 0.75
+            console.log(`Consumidor: ${this.numeroConta} | Valor total a pagar: ${valorKwH}`)  
         }
     }
+
     class ConsumidorComercial extends Consumidor {
-        constructor(numeroConta: number, quantidadeKWH: number) {
-            super(numeroConta, quantidadeKWH)
-        }
+        calculo(): void {
+            let valorKwH: number = 0
 
-        calculo(): number {
             if (this.quantidadeKWH <= 1000) {
-                this.quantidadeKWH = this.quantidadeKWH * 0.60
+                valorKwH = this.quantidadeKWH * 0.60
+                console.log(`Consumidor: ${this.numeroConta} | Valor total a pagar: ${valorKwH}`)
             } else {
-                let valorPrimeiros1000 = 1000 * 0.60
-                let excedente = this.quantidadeKWH - 1000
-                let valorExcedente = excedente * 0.50
-
-                return valorPrimeiros1000 + valorExcedente
+                valorKwH = this.quantidadeKWH * 0.50
+                console.log(`Consumidor: ${this.numeroConta} | Valor total a pagar: ${valorKwH}`)
             }
         }
     }
@@ -105,10 +98,15 @@ export function POOqt37(): void {
             listaConsumo.push(consumidor)
         }
     }
-    for (let consumidor of listaConsumo) {
+    let somaDKwH: number = 0
 
-        console.log(`Conta: ${consumidor.numeroConta}`)
-        console.log(`Consumo: ${consumidor.quantidadeKWH} kWh`)
-        console.log(`Valor da fatura: R$ ${consumidor.calculo().toFixed(2)}`)
+    for (let consumidor of listaConsumo) {
+        consumidor.calculo()
+
+        somaDKwH += consumidor.quantidadeKWH
     }
+
+    let media: number = somaDKwH / listaConsumo.length
+
+    console.log(`Média de KwH por dia: ${media}`)
 }

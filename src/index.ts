@@ -18,11 +18,17 @@ import { POOqt16 } from "./POO/questao16.js";
 import { POOqt17 } from "./POO/questao17.js";
 import { POOqt18 } from "./POO/questao18.js";
 import { POOqt30 } from "./POO/questao30.js";
+import { POOqt34 } from "./POO/questao34.js";
+import { POOqt35 } from "./POO/questao35.js";
+import { POOqt36 } from "./POO/questao36.js";
+import { POOqt37 } from "./POO/questao37.js";
+import { POOqt38 } from "./POO/questao38.js";
 import { POOqt42 } from "./POO/questao42.js";
 import { POOqt43 } from "./POO/questao43.js";
 import { POOqt44 } from "./POO/questao44.js";
 import { POOqt45 } from "./POO/questao45.js";
 import { POOqt46 } from "./POO/questao46.js";
+
 
 document.getElementById("btPOO1")?.addEventListener("click",POOqt1)
 document.getElementById("btPOO2")?.addEventListener("click",POOqt2)
@@ -43,6 +49,11 @@ document.getElementById("btPOO16")?.addEventListener("click",POOqt16)
 document.getElementById("btPOO17")?.addEventListener("click",POOqt17)
 document.getElementById("btPOO18")?.addEventListener("click",POOqt18)
 document.getElementById("btPOO30")?.addEventListener("click",POOqt30)
+document.getElementById("btPOO34")?.addEventListener("click",POOqt34)
+document.getElementById("btPOO35")?.addEventListener("click",POOqt35)
+document.getElementById("btPOO36")?.addEventListener("click",POOqt36)
+document.getElementById("btPOO37")?.addEventListener("click",POOqt37)
+document.getElementById("btPOO38")?.addEventListener("click",POOqt38)
 document.getElementById("btPOO42")?.addEventListener("click",POOqt42)
 document.getElementById("btPOO43")?.addEventListener("click",POOqt43)
 document.getElementById("btPOO44")?.addEventListener("click",POOqt44)
