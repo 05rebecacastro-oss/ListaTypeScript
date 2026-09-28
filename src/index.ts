@@ -23,6 +23,9 @@ import { POOqt35 } from "./POO/questao35.js";
 import { POOqt36 } from "./POO/questao36.js";
 import { POOqt37 } from "./POO/questao37.js";
 import { POOqt38 } from "./POO/questao38.js";
+import { POOqt39 } from "./POO/questao39.js";
+import { POOqt40 } from "./POO/questao40.js";
+import { POOqt41 } from "./POO/questao41.js";
 import { POOqt42 } from "./POO/questao42.js";
 import { POOqt43 } from "./POO/questao43.js";
 import { POOqt44 } from "./POO/questao44.js";
@@ -54,6 +57,9 @@ document.getElementById("btPOO35")?.addEventListener("click",POOqt35)
 document.getElementById("btPOO36")?.addEventListener("click",POOqt36)
 document.getElementById("btPOO37")?.addEventListener("click",POOqt37)
 document.getElementById("btPOO38")?.addEventListener("click",POOqt38)
+document.getElementById("btPOO39")?.addEventListener("click",POOqt39)
+document.getElementById("btPOO40")?.addEventListener("click",POOqt40)
+document.getElementById("btPOO41")?.addEventListener("click",POOqt41)
 document.getElementById("btPOO42")?.addEventListener("click",POOqt42)
 document.getElementById("btPOO43")?.addEventListener("click",POOqt43)
 document.getElementById("btPOO44")?.addEventListener("click",POOqt44)

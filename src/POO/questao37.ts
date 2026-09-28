@@ -65,36 +65,18 @@ export function POOqt37(): void {
 
         if (opcao === 1) {
 
-            let numeroConta = Number(
-                prompt("Informe o número da conta:")
-            )
+            let numeroConta = Number(prompt("Informe o número da conta:"))
+            let quantidadeKWH = Number(prompt("Informe a quantidade de kWh consumidos:"))
 
-            let quantidadeKWH = Number(
-                prompt("Informe a quantidade de kWh consumidos:")
-            )
-
-            let consumidor = new ConsumidorResidencial(
-                numeroConta,
-                quantidadeKWH
-            )
-
+            let consumidor = new ConsumidorResidencial(numeroConta,quantidadeKWH)
             listaConsumo.push(consumidor)
 
         } else if (opcao === 2) {
 
-            let numeroConta = Number(
-                prompt("Informe o número da conta:")
-            )
+            let numeroConta = Number(prompt("Informe o número da conta:"))
+            let quantidadeKWH = Number(prompt("Informe a quantidade de kWh consumidos:"))
 
-            let quantidadeKWH = Number(
-                prompt("Informe a quantidade de kWh consumidos:")
-            )
-
-            let consumidor = new ConsumidorComercial(
-                numeroConta,
-                quantidadeKWH
-            )
-
+            let consumidor = new ConsumidorComercial(numeroConta,quantidadeKWH)
             listaConsumo.push(consumidor)
         }
     }
