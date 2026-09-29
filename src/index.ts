@@ -31,7 +31,10 @@ import { POOqt43 } from "./POO/questao43.js";
 import { POOqt44 } from "./POO/questao44.js";
 import { POOqt45 } from "./POO/questao45.js";
 import { POOqt46 } from "./POO/questao46.js";
-
+import { POOqt47 } from "./POO/questao47.js";
+import { POOqt48 } from "./POO/questao48.js";
+import { POOqt49 } from "./POO/questao49.js";
+import { POOqt50 } from "./POO/questao50.js";
 
 document.getElementById("btPOO1")?.addEventListener("click",POOqt1)
 document.getElementById("btPOO2")?.addEventListener("click",POOqt2)
@@ -65,4 +68,8 @@ document.getElementById("btPOO43")?.addEventListener("click",POOqt43)
 document.getElementById("btPOO44")?.addEventListener("click",POOqt44)
 document.getElementById("btPOO45")?.addEventListener("click",POOqt45)
 document.getElementById("btPOO46")?.addEventListener("click",POOqt46)
+document.getElementById("btPOO47")?.addEventListener("click",POOqt47)
+document.getElementById("btPOO48")?.addEventListener("click",POOqt48)
+document.getElementById("btPOO49")?.addEventListener("click",POOqt49)
+document.getElementById("btPOO50")?.addEventListener("click",POOqt50)
 

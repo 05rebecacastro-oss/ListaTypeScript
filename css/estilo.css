@@ -1,24 +1,57 @@
     body {
-        background-color: #ffffff;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 20px;
-        color: #4c75c7;
+
+        .btn-gestao {
+            /* Alinhamento do ícone e do texto */
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            /* Espaço entre o ícone e o texto */
+
+            /* Espaçamento interno e bordas arredondadas (pílula) */
+            padding: 12px 32px;
+            border-radius: 50px;
+
+            /* Cores e Estilo */
+            background-color: rgba(0, 128, 128, 0.1);
+            /* Fundo escuro semi-transparente verde-azulado */
+            border: 1px solid #00a896;
+            /* Borda verde brilhante */
+            color: #00a896;
+            /* Cor do texto idêntica à borda */
+
+            /* Tipografia */
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            /* Espaçamento entre as letras */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito opcional ao passar o mouse */
+        .btn-gestao:hover {
+            background-color: #a80000;
+            color: #ff0000;
+        }
+
+        /* Ajuste do tamanho do ícone */
+        .btn-gestao svg {
+            width: 50px;
+            height: 50px;
+        }
+
+
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         color: #af6bee;
         border-bottom: 2px solid #0097ee;
         padding-bottom: 8px;
     }
+
     h3 {
         border-bottom-width: 1px;
         margin-top: 25px;
     }
-    <button>
-        <type> ="button"
-        data-action="clicked"
-        aria-label="questao1.ts">
-        questao1.ts
-    </button>
-
-    
